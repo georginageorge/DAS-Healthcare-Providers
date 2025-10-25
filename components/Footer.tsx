@@ -1,0 +1,129 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { Facebook, Instagram, Twitter } from "lucide-react";
+
+export default function Footer() {
+  return (
+    <footer className="bg-white py-12 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Logo and Description */}
+          <div className="col-span-1 md:col-span-2">
+            <div className="mb-6">
+              <Image
+                src="/logo.png"
+                alt="DAS Healthcare"
+                width={180}
+                height={48}
+                className="h-12 w-auto"
+              />
+            </div>
+            <p className="text-gray-600 max-w-md mb-6">
+              Dedicated to providing compassionate care and support, empowering
+              lives through sepcialized services....
+            </p>
+            <div className="flex items-center space-x-6 mb-6">
+              <a
+                href="#"
+                className="text-gray-600 hover:text-blue-600 transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-blue-400 transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-6 h-6" />
+              </a>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-pink-600 transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
+            </div>
+            <p className="text-gray-600 text-sm">
+              © {new Date().getFullYear()} DAS Healthcare Providers. All rights
+              reserved.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-4">Quick Links</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/about"
+                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  Our Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers"
+                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  Careers
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-4">Contact Info</h3>
+            <ul className="space-y-3">
+              <li className="text-gray-600">
+                123 Healthcare Street
+                <br />
+                London, UK SW1A 1AA
+              </li>
+              <li>
+                <a
+                  href="tel:+442012345678"
+                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  +44 20 1234 5678
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:info@dashealthcare.com"
+                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  info@dashealthcare.com
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-gray-200"></div>
+      </div>
+    </footer>
+  );
+}
