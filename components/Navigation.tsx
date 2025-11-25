@@ -41,6 +41,18 @@ export default function Navbar() {
           </li>
           <li>
             <Link
+              href="/about"
+              className={`${
+                pathname === "/about"
+                  ? "text-blue-500"
+                  : "text-gray-700 hover:text-blue-500"
+              } transition-colors`}
+            >
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/services"
               className={`${
                 pathname === "/services"
@@ -87,13 +99,28 @@ export default function Navbar() {
               Careers
             </Link>
           </li>
+          <li>
+            <Link
+              href="/contact"
+              className={`${
+                pathname === "/contact"
+                  ? "text-blue-500"
+                  : "text-gray-700 hover:text-blue-500"
+              } transition-colors`}
+            >
+              Contact Us
+            </Link>
+          </li>
         </ul>
 
         <div className="flex items-center gap-4">
-          {/* Desktop Button */}
-          <button className="hidden md:block bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-medium hover:bg-blue-200 transition-colors">
+          {/* Desktop Button (UPDATED) */}
+          <Link
+            href="/contact"
+            className="hidden md:block bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-medium hover:bg-blue-200 transition-colors"
+          >
             Request a Care Assessment
-          </button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -127,6 +154,19 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/about"
+                className={`block py-2 ${
+                  pathname === "/about"
+                    ? "text-blue-500"
+                    : "text-gray-700 hover:text-blue-500"
+                } transition-colors`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About Us
               </Link>
             </li>
             <li>
@@ -181,10 +221,29 @@ export default function Navbar() {
                 Careers
               </Link>
             </li>
+            <li>
+              <Link
+                href="/contact"
+                className={`block py-2 ${
+                  pathname === "/contact"
+                    ? "text-blue-500"
+                    : "text-gray-700 hover:text-blue-500"
+                } transition-colors`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+            </li>
+
+            {/* Mobile Button (UPDATED) */}
             <li className="pt-4">
-              <button className="w-full bg-blue-100 text-blue-700 px-4 py-3 rounded-full font-medium hover:bg-blue-200 transition-colors text-lg">
+              <Link
+                href="/contact"
+                onClick={() => setIsMenuOpen(false)}
+                className="w-full block bg-blue-100 text-blue-700 px-4 py-3 rounded-full font-medium hover:bg-blue-200 transition-colors text-lg text-center"
+              >
                 Request a Care Assessment
-              </button>
+              </Link>
             </li>
           </ul>
         </div>

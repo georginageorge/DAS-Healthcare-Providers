@@ -1,6 +1,8 @@
 "use client";
+import { useRouter } from "next/navigation";
 
 export default function ExtendedFamilyHero() {
+  const router = useRouter();
   return (
     <section className="flex flex-col items-center justify-center min-h-[80vh] px-6 py-16 bg-[#E9F4FB] text-center">
       <div className="max-w-3xl">
@@ -21,7 +23,9 @@ export default function ExtendedFamilyHero() {
           needs.
         </p>
 
-        <button className="bg-[#0098DB] text-white font-semibold px-6 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">
+        <button 
+        onClick={() => router.push("/contact")}
+        className="bg-[#0098DB] text-white font-semibold px-6 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">
           Request a Care Assessment
         </button>
       </div>

@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navigation";
 import ExtendedFamilyHero from "@/components/ExtendedApproach";
 import GuildingPrinciples from "@/components/GuldingPrinciples";
-// import Transformative from "@/components/Transformative";
+import Transformative from "@/components/Transformative";
+import Voice from "@/components/Voice";
 
 export default function ApproachPage() {
   return (
@@ -9,7 +10,8 @@ export default function ApproachPage() {
       <Navbar />
       <ExtendedFamilyHero />
       <GuildingPrinciples />
-      {/* <Transformative /> */}
+      <Transformative />
+      <Voice />
     </div>
   );
 }

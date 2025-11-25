@@ -35,7 +35,7 @@ export default function Footer() {
               <a
                 href="#"
                 className="text-gray-600 hover:text-blue-400 transition-colors"
-                aria-label="Twitter"
+                aria-label="X"
               >
                 <Twitter className="w-6 h-6" />
               </a>
@@ -78,7 +78,7 @@ export default function Footer() {
                   href="/contact"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  Contact
+                  Contact Us
                 </Link>
               </li>
               <li>
@@ -97,9 +97,8 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-900 mb-4">Contact Info</h3>
             <ul className="space-y-3">
               <li className="text-gray-600">
-                123 Healthcare Street
-                <br />
-                London, UK SW1A 1AA
+                9, Arcus Road, Bromley.<br/>
+                Kent BR1 4NN. <br/>Service Providers:Personal Care.
               </li>
               <li>
                 <a
@@ -114,7 +113,7 @@ export default function Footer() {
                   href="mailto:info@dashealthcare.com"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  info@dashealthcare.com
+                  admin@dascareproviders.com
                 </a>
               </li>
             </ul>

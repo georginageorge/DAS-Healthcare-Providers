@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import FamiliesSection from "@/components/FamiliesSection";
 import Services from "@/components/Services";
-import ApproachPage from "./approach/Page";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <WhyChooseSection />
       <FamiliesSection />
       <Services />
-      <ApproachPage />
     </div>
   );
 }

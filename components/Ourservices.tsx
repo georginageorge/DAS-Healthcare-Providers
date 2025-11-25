@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import {
   Carousel,
@@ -13,7 +14,7 @@ import Buttong from "./Button";
 export default function OurServices() {
   // Plugin ref for autoplay
   const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: false }));
-
+  const router = useRouter();
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
       {/* === Background Carousel === */}
@@ -26,7 +27,6 @@ export default function OurServices() {
         className="absolute inset-0 w-full h-full"
       >
         <CarouselContent className="h-full">
-          {/* === Replace with your actual image names from /public folder === */}
           <CarouselItem className="relative w-full h-screen">
             <Image
               src="/hero1.jpg"
@@ -75,7 +75,8 @@ export default function OurServices() {
           </p>
 
           <div className="flex justify-center">
-            <Buttong />
+            <Buttong 
+            />
           </div>
         </div>
       </div>
